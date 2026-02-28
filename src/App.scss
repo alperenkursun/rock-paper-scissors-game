@@ -22,3 +22,42 @@
   opacity: 0.6;
   padding-bottom: 20px;
 }
+
+
+
+.match-over-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(10, 12, 39, 0.9);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.4s ease;
+
+  .match-over-card {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+
+    h1 { color: #141539; font-size: 2.5rem; margin-bottom: 10px; }
+    p { color: #606e85; font-size: 1.2rem; margin-bottom: 30px; }
+
+    button {
+      background: #db2e4d;
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s;
+      &:hover { transform: scale(1.05); background: #c22543; }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; } to { opacity: 1; }
+}
